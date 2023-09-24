@@ -1,0 +1,25 @@
+version: '3'
+services:
+  vss-referee:
+    image: ersaraujo/ieeevss:referee
+    environment:
+      - DISPLAY=$DISPLAY
+    network_mode: host
+    tty: true
+
+  vss-vision:
+    image: ersaraujo/ieeevss:vision
+    environment:
+      - DISPLAY=$DISPLAY
+    network_mode: host
+    volumes:
+      - vss-vision-config:/opt/vss-vision/src/Config
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+    tty: true
+
+volumes:
+  vss-vision-config:
+
+
