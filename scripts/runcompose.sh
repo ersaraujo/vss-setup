@@ -1,4 +1,4 @@
 #!/bin/bash
 
 xhost +local:docker
-docker-compose up --build -d
+docker-compose up --quiet-pull  --build -d
