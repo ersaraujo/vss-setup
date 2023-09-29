@@ -38,4 +38,4 @@ done
 echo "volumes:" >> "$output_file"
 echo "  vss-vision-config:" >> "$output_file"
 
-echo "Arquivo $output_file gerado com sucesso."
+echo "File $output_file generated successfully."
