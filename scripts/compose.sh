@@ -8,7 +8,7 @@ echo "services:" >> "$output_file"
 # Serviço vss-referee
 cat <<EOF >> "$output_file"
   vss-referee:
-    image: ersaraujo/vss-referee
+    image: ersaraujo/vss-referee:latest
     environment:
       - DISPLAY=\$DISPLAY
     network_mode: host
@@ -18,7 +18,7 @@ EOF
 # Serviço vss-vision
 cat <<EOF >> "$output_file"
   vss-vision:
-    image: ersaraujo/vss-vision
+    image: ersaraujo/vss-vision:latest
     environment:
       - DISPLAY=\$DISPLAY
     network_mode: host
